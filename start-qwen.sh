@@ -64,7 +64,7 @@ trap 'kill $WATCHER_PID 2>/dev/null' EXIT
   -m "$MODEL" \
   --jinja --alias qwen3.8-27b \
   --ctx-size 36864 --n-gpu-layers 99 -t 8 \
-  -b 2048 -ub 512 --parallel 1 --kv-unified --ctx-checkpoints 32 \
+  -b 2048 -ub 512 --kv-unified --ctx-checkpoints 32 \
   --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 \
   --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0 --repeat-penalty 1.0 \
   --reasoning on --reasoning-budget -1 \
