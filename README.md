@@ -1,6 +1,6 @@
 # Qwen3.8 27B on an RX 9060 XT 16GB (llama.cpp, Vulkan)
 
-Tuned `llama-server` settings for running Qwen3.8 27B (UD-IQ4_XS) fully on the GPU of a 16GB RX 9060 XT, with speculative decoding and a 36,864 token context. A launcher script starts the server, waits for it to be ready, and opens the [`pi`](TODO: link to pi) coding agent in your project folder.
+Tuned `llama-server` settings for running Qwen3.8 27B (UD-IQ4_XS) fully on the GPU of a 16GB RX 9060 XT, with speculative decoding and a 36,864 token context. A launcher script starts the server, waits for it to be ready, and opens the [`pi`](https://pi.dev/) coding agent in your project folder.
 
 These are the settings I settled on after testing a handful of options on one machine. They are not an exhaustive search, so treat them as a good starting point.
 
@@ -22,15 +22,15 @@ Test prompt: 8,251 tokens (a single-file voxel game plus a request to add a day/
 | | |
 |---|---|
 | GPU | AMD Radeon RX 9060 XT 16GB |
-| Backend | Vulkan, Mesa RADV (TODO: Mesa version) |
+| Backend | Vulkan, Mesa RADV 26.2.4 (kisak-mesa PPA) |
 | OS | Zorin OS |
 | llama.cpp | build 74a7c897f (10820) |
-| Model | [Qwen3.8-27B-UD-IQ4_XS.gguf](TODO: model link), 13.26 GiB, 4.25 bpw |
+| Model | [Qwen3.8-27B-UD-IQ4_XS.gguf](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/blob/main/Qwen3.8-27B-UD-IQ4_XS.gguf), 13.26 GiB, 4.25 bpw |
 
 ## Usage
 
 ```bash
-git clone https://github.com/<your-username>/qwen3.8-27b-rx9060xt
+git clone https://github.com/4mrm4/qwen3.8-27b-rx9060xt
 cd qwen3.8-27b-rx9060xt
 chmod +x start-qwen.sh
 ```
